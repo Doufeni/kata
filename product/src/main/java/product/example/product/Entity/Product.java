@@ -21,4 +21,10 @@ public class Product {
     private String title;
     private String description;
     private int quantity;
+
+    public Product(String title, String description, int quantity) {
+        this.title = title;
+        this.description = description;
+        this.quantity = quantity;
+    }
 }

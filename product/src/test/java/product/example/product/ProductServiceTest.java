@@ -33,8 +33,8 @@ class ProductServiceTest {
     void testSaveAllProducts() {
         // Arrange: Create sample product list
         List<Product> products = Arrays.asList(
-                new Product(1L,"Product 1", "Description 1", 10),
-                new Product(2L,"Product 2", "Description 2", 5)
+                new Product("Product 1", "Description 1", 10),
+                new Product("Product 2", "Description 2", 5)
         );
 
         // Mock repository behavior
