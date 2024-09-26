@@ -39,17 +39,16 @@ class ProductControllerTest {
     @BeforeEach
     void setUp() {
         products = Arrays.asList(
-                new Product(1L, "Product 1", "Description 1", 10),
-                new Product(2L, "Product 2", "Description 2", 5)
+                new Product( "Product 1", "Description 1", 10),
+                new Product( "Product 2", "Description 2", 5)
         );
     }
 
     @Test
     void testSaveProducts() throws Exception {
-        // Arrange: Mock the service method
+
         when(productService.saveAllProducts(any())).thenReturn(products);
 
-        // Act & Assert: Call the controller's POST endpoint and validate the response
         mockMvc.perform(post("/api/v1/products/saveProducts")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(products))) // Send JSON content
