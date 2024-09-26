@@ -3,10 +3,10 @@ name: Build & Deploy Product Microservice
 on:
   push:
     branches:
-      - add-deploying-and-building-file
+      - main
   pull_request:
     branches:
-      - add-deploying-and-building-file
+      - main
 
 jobs:
   build-deploy:
