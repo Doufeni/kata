@@ -24,4 +24,5 @@ public class ProductService {
         return StreamSupport
                 .stream(savedProducts.spliterator(), false)
                 .collect(Collectors.toList());
-    }}
+    }
+}
