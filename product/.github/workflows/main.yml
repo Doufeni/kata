@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - add-deploying-and-building-file
-
+  pull_request:
+    branches:
+      - add-deploying-and-building-file
 jobs:
   build-deploy:
     name: Build and Deploy product
