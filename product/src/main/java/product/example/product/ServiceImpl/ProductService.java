@@ -25,4 +25,13 @@ public class ProductService {
                 .stream(savedProducts.spliterator(), false)
                 .collect(Collectors.toList());
     }
+
+
+    public List<Product> findAll() {
+        Iterable<Product> savedProducts = productRepository.findAll();
+        return StreamSupport
+                .stream(savedProducts.spliterator(), false)
+                .collect(Collectors.toList());
+
+    }
 }
