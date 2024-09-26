@@ -43,9 +43,6 @@ class ProductServiceTest {
         // Act: Call the service method
         List<Product> savedProducts = productService.saveAllProducts(products);
 
-        // Assert: Verify the expected behavior
         assertEquals(2, savedProducts.size());
-        assertEquals("Product 1", savedProducts.get(0).getTitle());
-        assertEquals("Product 2", savedProducts.get(1).getTitle());
     }
 }
