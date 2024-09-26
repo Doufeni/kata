@@ -24,7 +24,7 @@ jobs:
           java-version: 23        
 
       - name: Run Unit Tests
-        run: mvn -B test --file pom.xml
+        run: mvn -B test --file product/pom.xml
 
       - name: Build the application
-        run: mvn clean package --file pom.xml
+        run: mvn clean package --file product/pom.xml
