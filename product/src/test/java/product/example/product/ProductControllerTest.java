@@ -51,8 +51,8 @@ class ProductControllerTest {
 
         mockMvc.perform(post("/api/v1/products/saveProducts")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(products))) // Send JSON content
-                .andExpect(status().isCreated()) // Expect HTTP 201 Created
-                .andExpect(content().json(objectMapper.writeValueAsString(products))); // Expect the returned JSON to match the products list
+                        .content(objectMapper.writeValueAsString(products)))
+                .andExpect(status().isCreated())
+                .andExpect(content().json(objectMapper.writeValueAsString(products)));
     }
 }
